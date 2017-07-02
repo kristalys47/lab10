@@ -1,15 +1,12 @@
 
 
-public class TestingCode {
-	public static void main(){
-		String[] voteses ={"Jorge", "Jorge", "Jorge"};
-		System.out.println(electionWinner(voteses));;
-		
-	}
-
+public class Elections {
+	
 	static String electionWinner(String[] votes) {
-		int countvotes[]= {0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
-
+		int[] countvotes= new int[votes.length];
+		for(int i=0; i<votes.length; i++){
+			countvotes[i]=1;
+		}
 
 		for(int i=1; i<votes.length; i++){
 			if(!votes[i].equals(" ")){
@@ -59,10 +56,7 @@ public class TestingCode {
 			}
 			else
 				return votes[save2i];
-			
 		}
-		
-
 		return votes[savei];
 	}
 }
